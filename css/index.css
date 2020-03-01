@@ -219,7 +219,7 @@ img {
   text-align: justify;
   padding: 5px 5px;
 }
-.rotating-area .hero-cards .rotating-img .section-back {
+.rotating-area .hero-cards .rotating-img section {
   transform: rotateY(180deg);
 }
 .rotating-area .hero-cards .img-one {
