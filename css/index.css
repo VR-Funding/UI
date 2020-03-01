@@ -134,14 +134,14 @@ html {
 }
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Didact Gothic';
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Passion One';
 }
 h1 {
   font-size: 4rem;
@@ -164,4 +164,91 @@ a,
 img {
   max-width: 100%;
   height: auto;
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(-360deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+.rotating-area {
+  position: relative;
+  width: 300px;
+  margin: 150px auto;
+  perspective: 2000px;
+}
+.rotating-area h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+.rotating-area:hover .hero-cards {
+  animation-play-state: paused;
+  transform: rotateY(180deg);
+}
+.rotating-area .hero-cards {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(-360deg) translateZ(-300px);
+  animation: rotate 40s steps(10000, end) infinite;
+}
+.rotating-area .hero-cards .rotating-img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 300px;
+  height: 200px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.rotating-area .hero-cards .rotating-img section,
+.rotating-area .hero-cards .rotating-img .section-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 15px;
+  text-align: justify;
+  padding: 5px 5px;
+}
+.rotating-area .hero-cards .rotating-img .section-back {
+  transform: rotateY(180deg);
+}
+.rotating-area .hero-cards .img-one {
+  transform: rotateY(0deg) translateZ(300px);
+}
+.rotating-area .hero-cards .img-one:hover {
+  transform: rotateY(180deg) translateZ(-300px);
+}
+.rotating-area .hero-cards .img-two {
+  transform: rotateY(72deg) translateZ(300px);
+}
+.rotating-area .hero-cards .img-two:hover {
+  transform: rotateY(252deg) translateZ(-300px);
+}
+.rotating-area .hero-cards .img-three {
+  transform: rotateY(144deg) translateZ(300px);
+}
+.rotating-area .hero-cards .img-three:hover {
+  transform: rotateY(324deg) translateZ(-300px);
+}
+.rotating-area .hero-cards .img-four {
+  transform: rotateY(216deg) translateZ(300px);
+}
+.rotating-area .hero-cards .img-four:hover {
+  transform: rotateY(396deg) translateZ(-300px);
+}
+.rotating-area .hero-cards .img-five {
+  transform: rotateY(288deg) translateZ(300px);
+}
+.rotating-area .hero-cards .img-five:hover {
+  transform: rotateY(468deg) translateZ(-300px);
 }
