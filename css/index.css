@@ -149,6 +149,9 @@ h1 {
 h2 {
   font-size: 3.2rem;
 }
+h3 {
+  font-size: 6.4rem;
+}
 h4 {
   font-size: 2.5rem;
 }
@@ -160,7 +163,7 @@ a,
 header {
   background-image: url(../images/neonbrand-mlZzMow-CQw-unsplash.jpg);
   background-size: cover;
-  width: 1440px;
+  max-width: 1440px;
   height: 676px;
   margin: 0 auto;
 }
@@ -238,6 +241,127 @@ header .startdiv .start:hover {
 }
 footer {
   text-align: center;
+}
+.container {
+  max-width: 1440px;
+  margin: 7.15rem auto 5.3rem auto;
+}
+.container .help {
+  padding: 3.05rem 0 5.3rem 0;
+  border-top: 3px solid #438029;
+  width: 88%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container .help .helpus {
+  width: 100%;
+  text-align: center;
+}
+.container .help .helpus h2 {
+  font-size: 10rem;
+  margin-bottom: 3rem;
+  color: #438029;
+}
+.container .help .vert {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .help .vert h3 {
+  text-align: center;
+  color: #438029;
+}
+.container .help .vert p {
+  font-size: 2rem;
+}
+.container .help .vert .illustration {
+  margin: 0 auto;
+}
+.container .help .vert .illustration img {
+  max-width: 100%;
+  width: 20rem;
+}
+.container .newsletter {
+  width: 100%;
+  height: 30rem;
+  background: rgba(255, 198, 160, 0.4);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .newsletter input {
+  position: relative;
+  bottom: -3.2rem;
+  padding: 0 0 0 3%;
+  font-size: 6rem;
+  width: 40%;
+  height: 11.4rem;
+  line-height: 13rem;
+  background: #FFFFFF;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+.container .newsletter input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 5rem;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+.container .newsletter input::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 5rem;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+.container .newsletter input:-ms-input-placeholder {
+  /* IE 10+ */
+  font-size: 5rem;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+.container .newsletter input:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 5rem;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+.container .newsletter div {
+  flex-shrink: 1;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.container .newsletter div h3 {
+  font-size: 4rem;
+  font-family: 'Didact Gothic';
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 2rem;
+}
+.container .newsletter div button {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #438029;
+  height: 11.4rem;
+  width: 46.6rem;
+  border-radius: 40px;
+  border: none;
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-family: 'Didact Gothic';
+  font-size: 7.2rem;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.container .newsletter div button:hover {
+  transform: scale(1.1);
+  color: #D4AF37;
 }
 @keyframes rotate {
   from {
