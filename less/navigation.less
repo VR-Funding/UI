@@ -1,22 +1,88 @@
  header {
+    background-image: url(../images/neonbrand-mlZzMow-CQw-unsplash.jpg);
+    background-size: cover;
+    width:1440px;
+    height: 676px;
     margin: 0 auto;
-    
     nav{
-        max-width: 80%;
+        
+        max-width: 90%;
         width: 100%;
         margin: 0 auto;
         height: 100px;
+        max-height: 100px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        .logo{
+            flex-shrink: 1;
+            width: 20%;
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-decoration: none;
+                h1{
+                    color: @greenlowlight;
+                    
+                }
+                img{
+                    height: 70px;
+                }
+            }
+            
+        }
         .links{
             flex-shrink: 1;
-            max-width: 50%;
-            width: 50%;
+            max-width: 60%;
+            width: 60%;
             display: flex;
             justify-content: space-between;
             font-family: @text-font;
-            text-decoration: none;
+            a{
+                line-height: 100px;
+                text-decoration: none;
+                color: white;
+            }
+            .backendlinks{
+                a{
+                    font-family: @heading-font;
+                    color: @greenlowlight;
+                    font-size: 3.6rem;
+                    &:hover{
+                        font-size: 3.8rem;
+                        color: @greenhighlight;
+                    }
+                    
+                }
+                
+            }
+            
         }
     }
+    .startdiv{
+        margin-top: 25rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .start {
+            flex-shrink: 1;
+            margin: 0 auto;
+            background-color: @greenlowlight;
+            height: 11.4rem;
+            width: 46.6rem;
+            border-radius: 40px;
+            border: none;
+            box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.4);
+            color: white;
+            font-family: @text-font;
+            font-size: 7.2rem;
+            text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+            &:hover{
+                transform: scale(1.1);
+                color: @goldtext;
+            }
+        }
+    }
+    
  }

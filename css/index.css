@@ -148,43 +148,93 @@ h1 {
 }
 h2 {
   font-size: 3.2rem;
-  padding-bottom: 10px;
 }
 h4 {
   font-size: 2.5rem;
-  padding-bottom: 10px;
 }
 p,
 a,
 .btn {
-  line-height: 1.5;
   font-size: 1.6rem;
-  padding-bottom: 10px;
-}
-img {
-  max-width: 100%;
-  height: auto;
 }
 header {
+  background-image: url(../images/neonbrand-mlZzMow-CQw-unsplash.jpg);
+  background-size: cover;
+  width: 1440px;
+  height: 676px;
   margin: 0 auto;
 }
 header nav {
-  max-width: 80%;
+  max-width: 90%;
   width: 100%;
   margin: 0 auto;
   height: 100px;
+  max-height: 100px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+}
+header nav .logo {
+  flex-shrink: 1;
+  width: 20%;
+}
+header nav .logo a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+header nav .logo a h1 {
+  color: #438029;
+}
+header nav .logo a img {
+  height: 70px;
 }
 header nav .links {
   flex-shrink: 1;
-  max-width: 50%;
-  width: 50%;
+  max-width: 60%;
+  width: 60%;
   display: flex;
   justify-content: space-between;
   font-family: 'Didact Gothic';
+}
+header nav .links a {
+  line-height: 100px;
   text-decoration: none;
+  color: white;
+}
+header nav .links .backendlinks a {
+  font-family: 'Passion One';
+  color: #438029;
+  font-size: 3.6rem;
+}
+header nav .links .backendlinks a:hover {
+  font-size: 3.8rem;
+  color: #7DAA6A;
+}
+header .startdiv {
+  margin-top: 25rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .startdiv .start {
+  flex-shrink: 1;
+  margin: 0 auto;
+  background-color: #438029;
+  height: 11.4rem;
+  width: 46.6rem;
+  border-radius: 40px;
+  border: none;
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-family: 'Didact Gothic';
+  font-size: 7.2rem;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+header .startdiv .start:hover {
+  transform: scale(1.1);
+  color: #D4AF37;
 }
 footer {
   text-align: center;
