@@ -304,29 +304,10 @@ footer {
   box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
-.container .newsletter input::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  font-size: 5rem;
-  margin: 0 auto;
-  color: rgba(0, 0, 0, 0.2);
-  max-width: 100%;
-}
-.container .newsletter input::-moz-placeholder {
-  /* Firefox 19+ */
-  font-size: 5rem;
-  margin: 0 auto;
-  color: rgba(0, 0, 0, 0.2);
-  max-width: 100%;
-}
-.container .newsletter input:-ms-input-placeholder {
-  /* IE 10+ */
-  font-size: 5rem;
-  margin: 0 auto;
-  color: rgba(0, 0, 0, 0.2);
-  max-width: 100%;
-}
+.container .newsletter input::-webkit-input-placeholder,
+.container .newsletter input::-moz-placeholder,
+.container .newsletter input:-ms-input-placeholder,
 .container .newsletter input:-moz-placeholder {
-  /* Firefox 18- */
   font-size: 5rem;
   margin: 0 auto;
   color: rgba(0, 0, 0, 0.2);
@@ -362,6 +343,80 @@ footer {
 .container .newsletter div button:hover {
   transform: scale(1.1);
   color: #D4AF37;
+}
+.container .bigcta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container .bigcta .right,
+.container .bigcta .left {
+  margin: 5rem auto;
+  width: 80%;
+  height: 21.3rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.container .bigcta .right img,
+.container .bigcta .left img {
+  position: relative;
+  height: 50.8rem;
+  border-radius: 50%;
+  top: 7.6rem;
+  right: -8.2rem;
+}
+.container .bigcta .left {
+  position: relative;
+  flex-direction: row;
+}
+.container .bigcta .left img {
+  left: -8.2rem;
+  transform: rotateY(180deg);
+}
+.container .bigcta .even {
+  background: rgba(255, 198, 160, 0.4);
+}
+.container .bigcta .cta h2 {
+  margin: 2rem auto;
+  width: 80%;
+  font-size: 6.5rem;
+  color: #438029;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+}
+.container .bigcta .cta h2:before,
+.container .bigcta .cta h2:after {
+  position: absolute;
+  top: 51%;
+  overflow: hidden;
+  width: 50%;
+  height: 3px;
+  content: '\a0';
+  background-color: #438029;
+}
+.container .bigcta .cta h2:before {
+  margin-left: -50%;
+  text-align: right;
+}
+.container .bigcta .cta button {
+  background-color: white;
+  border: 3px solid #7DAA6A;
+  border-radius: 10px;
+  height: 7.5rem;
+  font-size: 3rem;
+  color: #7DAA6A;
+  padding: 0 4.3rem;
+  margin: 0 4.3rem;
 }
 @keyframes rotate {
   from {
