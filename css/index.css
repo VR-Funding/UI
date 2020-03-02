@@ -148,9 +148,11 @@ h1 {
 }
 h2 {
   font-size: 3.2rem;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 h3 {
   font-size: 6.4rem;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 h4 {
   font-size: 2.5rem;
@@ -166,6 +168,9 @@ header {
   max-width: 1440px;
   height: 676px;
   margin: 0 auto;
+}
+header .navbar {
+  background: rgba(0, 0, 0, 0.2);
 }
 header nav {
   max-width: 90%;
@@ -188,7 +193,7 @@ header nav .logo a {
   text-decoration: none;
 }
 header nav .logo a h1 {
-  color: #438029;
+  color: #62BC4E;
 }
 header nav .logo a img {
   height: 70px;
@@ -202,13 +207,14 @@ header nav .links {
   font-family: 'Didact Gothic';
 }
 header nav .links a {
+  font-size: 2.6rem;
   line-height: 100px;
   text-decoration: none;
   color: white;
 }
 header nav .links .backendlinks a {
   font-family: 'Passion One';
-  color: #438029;
+  color: #62BC4E;
   font-size: 3.6rem;
 }
 header nav .links .backendlinks a:hover {
@@ -224,7 +230,7 @@ header .startdiv {
 header .startdiv .start {
   flex-shrink: 1;
   margin: 0 auto;
-  background-color: #438029;
+  background-color: #62BC4E;
   height: 11.4rem;
   width: 46.6rem;
   border-radius: 40px;
@@ -240,7 +246,20 @@ header .startdiv .start:hover {
   color: #D4AF37;
 }
 footer {
+  background: rgba(0, 0, 0, 0.2);
+}
+footer .fineprint {
+  width: 121.6rem;
+  margin: 0 auto;
+  padding: 5.2rem 0 2.6rem 0;
+}
+footer .fineprint p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+footer .copyright {
   text-align: center;
+  padding-bottom: 2.6rem;
 }
 .container {
   max-width: 1440px;
@@ -248,7 +267,7 @@ footer {
 }
 .container .help {
   padding: 3.05rem 0 5.3rem 0;
-  border-top: 3px solid #438029;
+  border-top: 3px solid #62BC4E;
   width: 88%;
   margin: 0 auto;
   display: flex;
@@ -262,7 +281,7 @@ footer {
 .container .help .helpus h2 {
   font-size: 10rem;
   margin-bottom: 3rem;
-  color: #438029;
+  color: #62BC4E;
 }
 .container .help .vert {
   width: 30%;
@@ -272,7 +291,7 @@ footer {
 }
 .container .help .vert h3 {
   text-align: center;
-  color: #438029;
+  color: #62BC4E;
 }
 .container .help .vert p {
   font-size: 2rem;
@@ -320,7 +339,7 @@ footer {
   flex-direction: column;
   text-align: center;
 }
-.container .newsletter div h3 {
+.container .newsletter div h4 {
   font-size: 4rem;
   font-family: 'Didact Gothic';
   color: rgba(0, 0, 0, 0.6);
@@ -329,7 +348,7 @@ footer {
 .container .newsletter div button {
   max-width: 100%;
   margin: 0 auto;
-  background-color: #438029;
+  background-color: #62BC4E;
   height: 11.4rem;
   width: 46.6rem;
   border-radius: 40px;
@@ -372,6 +391,7 @@ footer {
   border-radius: 50%;
   top: 7.6rem;
   right: -8.2rem;
+  z-index: 1;
 }
 .container .bigcta .left {
   position: relative;
@@ -384,27 +404,27 @@ footer {
 .container .bigcta .even {
   background: rgba(255, 198, 160, 0.4);
 }
-.container .bigcta .cta h2 {
+.container .bigcta .cta h3 {
   margin: 2rem auto;
   width: 80%;
   font-size: 6.5rem;
-  color: #438029;
+  color: #62BC4E;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   overflow: hidden;
   text-align: center;
 }
-.container .bigcta .cta h2:before,
-.container .bigcta .cta h2:after {
+.container .bigcta .cta h3:before,
+.container .bigcta .cta h3:after {
   position: absolute;
   top: 51%;
   overflow: hidden;
   width: 50%;
   height: 3px;
   content: '\a0';
-  background-color: #438029;
+  background-color: #62BC4E;
 }
-.container .bigcta .cta h2:before {
+.container .bigcta .cta h3:before {
   margin-left: -50%;
   text-align: right;
 }
@@ -418,6 +438,12 @@ footer {
   padding: 0 4.3rem;
   margin: 0 4.3rem;
 }
+.container .bigcta .cta button:hover {
+  transform: scale(1.1);
+  color: #D4AF37;
+  border: 3px solid #D4AF37;
+  cursor: pointer;
+}
 @keyframes rotate {
   from {
     transform: rotateY(-360deg);
@@ -428,9 +454,16 @@ footer {
 }
 .rotating-area {
   position: relative;
+  top: -28.2rem;
   width: 300px;
   margin: 3rem auto 30rem auto;
   perspective: 2000px;
+}
+.rotating-area h2 {
+  text-align: center;
+  font-size: 10rem;
+  margin-bottom: 3rem;
+  color: #62BC4E;
 }
 .rotating-area h3 {
   text-align: center;
@@ -454,7 +487,7 @@ footer {
   left: 10px;
   width: 300px;
   height: 200px;
-  transition: transform 0.8s;
+  transition: transform 0.8s ease-in-out;
   transform-style: preserve-3d;
   perspective: 1000px;
 }
@@ -467,7 +500,8 @@ footer {
   /* Safari */
   backface-visibility: hidden;
   background-color: white;
-  border: 3px solid black;
+  color: black;
+  border: 3px solid #62BC4E;
   border-radius: 15px;
   text-align: justify;
   padding: 5px 5px;

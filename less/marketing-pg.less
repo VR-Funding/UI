@@ -77,7 +77,7 @@
             display: flex;
             flex-direction: column;
             text-align: center;
-            h3{
+            h4{
                 font-size: 4rem;
                 font-family: @text-font;
                 color: rgba(0, 0, 0, 0.6);
@@ -132,6 +132,7 @@
                 border-radius: 50%;
                 top:7.6rem;
                 right: -8.2rem;
+                z-index: 1;
                 
                 
             }
@@ -150,29 +151,30 @@
         }
         .cta {
             
-            h2{
+            h3{
                 margin: 2rem auto;
                 width: 80%;
                 font-size: 6.5rem;
                 color: @greenlowlight;
                 position: relative;
-                z-index: 1;
+                z-index: 2;
                 overflow: hidden;
                 text-align: center;
-            }
-            h2:before, h2:after {
+                &:before, &:after {
                 
-                position: absolute;
-                top: 51%;
-                overflow: hidden;
-                width: 50%;
-                height: 3px;
-                content: '\a0';
-                background-color: @greenlowlight;
+                    position: absolute;
+                    top: 51%;
+                    overflow: hidden;
+                    width: 50%;
+                    height: 3px;
+                    content: '\a0';
+                    background-color: @greenlowlight;
+                }
+                &:before{
+                    margin-left: -50%;
+                    text-align: right;
             }
-            h2:before{
-                margin-left: -50%;
-                text-align: right;
+            
             }
             button{
                 background-color: white;
@@ -183,6 +185,12 @@
                 color: @greenhighlight;
                 padding: 0 4.3rem;
                 margin: 0 4.3rem ;
+                &:hover{
+                    transform: scale(1.1);
+                    color: @goldtext;
+                    border: 3px solid @goldtext;
+                    cursor: pointer;
+                }
                 
             }
         }
