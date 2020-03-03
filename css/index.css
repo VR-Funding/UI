@@ -246,7 +246,9 @@ header .startdiv .start:hover {
   color: #D4AF37;
 }
 footer {
-  background: rgba(0, 0, 0, 0.2);
+  max-width: 1440px;
+  background: rgba(255, 198, 160, 0.4);
+  margin: 0 auto;
 }
 footer .fineprint {
   width: 121.6rem;
@@ -413,18 +415,17 @@ footer .copyright {
   z-index: 2;
   overflow: hidden;
   text-align: center;
+  background-color: white;
 }
-.container .bigcta .cta h3:before,
-.container .bigcta .cta h3:after {
+.container .bigcta .cta h3:before {
   position: absolute;
   top: 51%;
   overflow: hidden;
-  width: 50%;
+  width: 110%;
   height: 3px;
   content: '\a0';
-  background-color: #62BC4E;
-}
-.container .bigcta .cta h3:before {
+  background-color: black;
+  z-index: -1;
   margin-left: -50%;
   text-align: right;
 }

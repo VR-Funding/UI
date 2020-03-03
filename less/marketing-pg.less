@@ -153,27 +153,31 @@
             
             h3{
                 margin: 2rem auto;
+                
                 width: 80%;
+                
                 font-size: 6.5rem;
                 color: @greenlowlight;
                 position: relative;
                 z-index: 2;
                 overflow: hidden;
                 text-align: center;
-                &:before, &:after {
-                
+                background-color: white;
+                &:before{
+                    
                     position: absolute;
                     top: 51%;
                     overflow: hidden;
-                    width: 50%;
+                    width: 110%;
                     height: 3px;
                     content: '\a0';
-                    background-color: @greenlowlight;
-                }
-                &:before{
+                    background-color: black;
+                    z-index: -1;
                     margin-left: -50%;
                     text-align: right;
-            }
+                    
+                }
+                
             
             }
             button{
