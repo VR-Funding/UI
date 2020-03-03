@@ -1,1 +1,48 @@
 
+.centered-placard(){
+    width: 100%;
+    margin: 3rem auto;
+    height: 11.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    .line{
+        width: 100%;
+        border-bottom: 3px solid @greenlowlight;
+    }       
+    h2 {
+        width: 100%;
+        color: @greenlowlight;
+        height: 11.5rem;
+        line-height: 11.5rem;
+        font-size: 10rem;
+        letter-spacing: 0.05rem;
+        background-color: white;
+        border: 3px solid @greenlowlight;
+        border-radius: 5px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    
+}
+
+.biggreenbutton(){
+    margin: 0 auto;
+    background-color: @greenlowlight;
+    height: 11.4rem;
+    width: 46.6rem;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.4);
+    color: white;
+    font-family: @text-font;
+    font-size: 7.2rem;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    &:hover{
+        transform: scale(1.1);
+        color: @goldtext;
+    }
+
+}
+    

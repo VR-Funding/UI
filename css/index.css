@@ -182,6 +182,12 @@ header nav {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 800px) {
+  header nav {
+    flex-direction: column;
+    height: 20rem;
+  }
+}
 header nav .logo {
   flex-shrink: 1;
   width: 20%;
@@ -206,16 +212,32 @@ header nav .links {
   justify-content: space-between;
   font-family: 'Didact Gothic';
 }
+@media (max-width: 800px) {
+  header nav .links {
+    max-width: 88%;
+    width: 100%;
+  }
+}
 header nav .links a {
   font-size: 2.6rem;
   line-height: 100px;
   text-decoration: none;
   color: white;
 }
+@media (max-width: 1180px) {
+  header nav .links a {
+    font-size: 2rem;
+  }
+}
 header nav .links .backendlinks a {
   font-family: 'Passion One';
   color: #62BC4E;
   font-size: 3.6rem;
+}
+@media (max-width: 1180px) {
+  header nav .links .backendlinks a {
+    font-size: 2.6rem;
+  }
 }
 header nav .links .backendlinks a:hover {
   font-size: 3.8rem;
@@ -251,7 +273,7 @@ footer {
   margin: 0 auto;
 }
 footer .fineprint {
-  width: 121.6rem;
+  width: 88%;
   margin: 0 auto;
   padding: 5.2rem 0 2.6rem 0;
 }
@@ -269,21 +291,39 @@ footer .copyright {
 }
 .container .help {
   padding: 3.05rem 0 5.3rem 0;
-  border-top: 3px solid #62BC4E;
   width: 88%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.container .help .helpus {
+.container .help .centered-placard {
   width: 100%;
+  margin: 3rem auto;
+  height: 11.5rem;
+  display: flex;
+  align-items: center;
   text-align: center;
 }
-.container .help .helpus h2 {
-  font-size: 10rem;
-  margin-bottom: 3rem;
+.container .help .centered-placard .line {
+  width: 100%;
+  border-bottom: 3px solid #62BC4E;
+}
+.container .help .centered-placard h2 {
+  width: 100%;
   color: #62BC4E;
+  height: 11.5rem;
+  line-height: 11.5rem;
+  font-size: 10rem;
+  letter-spacing: 0.05rem;
+  background-color: white;
+  border: 3px solid #62BC4E;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.container .help .centered-placard .line h2 {
+  width: 80rem;
 }
 .container .help .vert {
   width: 30%;
@@ -317,7 +357,7 @@ footer .copyright {
   position: relative;
   bottom: -3.2rem;
   padding: 0 0 0 3%;
-  font-size: 6rem;
+  font-size: 5.3rem;
   width: 40%;
   height: 11.4rem;
   line-height: 13rem;
@@ -329,7 +369,6 @@ footer .copyright {
 .container .newsletter input::-moz-placeholder,
 .container .newsletter input:-ms-input-placeholder,
 .container .newsletter input:-moz-placeholder {
-  font-size: 5rem;
   margin: 0 auto;
   color: rgba(0, 0, 0, 0.2);
   max-width: 100%;
@@ -348,7 +387,6 @@ footer .copyright {
   margin-bottom: 2rem;
 }
 .container .newsletter div button {
-  max-width: 100%;
   margin: 0 auto;
   background-color: #62BC4E;
   height: 11.4rem;
@@ -360,90 +398,119 @@ footer .copyright {
   font-family: 'Didact Gothic';
   font-size: 7.2rem;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
 }
 .container .newsletter div button:hover {
   transform: scale(1.1);
   color: #D4AF37;
 }
-.container .bigcta {
+.container .funding-cards-container {
+  position: relative;
+  width: 88%;
+  margin: 0 auto;
+}
+.container .funding-cards-container .centered-placard {
+  width: 100%;
+  margin: 3rem auto;
+  height: 11.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.container .funding-cards-container .centered-placard .line {
+  width: 100%;
+  border-bottom: 3px solid #62BC4E;
+}
+.container .funding-cards-container .centered-placard h2 {
+  width: 100%;
+  color: #62BC4E;
+  height: 11.5rem;
+  line-height: 11.5rem;
+  font-size: 10rem;
+  letter-spacing: 0.05rem;
+  background-color: white;
+  border: 3px solid #62BC4E;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.container .funding-cards-container .browse {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3% 3rem;
+}
+.container .funding-cards-container .browse h5 {
+  font-size: 3.6rem;
+}
+.container .funding-cards-container .browse #browse-by {
+  text-align: center;
+  padding-left: 3rem;
+  height: 3.3rem;
+  width: 14.4rem;
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+}
+.container .funding-cards-container .funding-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.container .funding-cards-container .funding-cards .hero {
+  position: relative;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+  width: 34.5rem;
+  height: 38rem;
+  row-gap: 10rem;
+  overflow: hidden;
+  box-shadow: 4px 4px 6px rgba(196, 196, 196, 0.3);
+  margin-bottom: 3rem;
+}
+.container .funding-cards-container .funding-cards .hero .trending {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  width: 10.8rem;
+  height: 2.5rem;
+  background-image: url(/images/trending.svg);
+  z-index: 5;
+}
+.container .funding-cards-container .funding-cards .hero .upper {
+  height: 50%;
+  border-bottom: 1px solid #C4C4C4;
+  overflow: hidden;
+  background-image: url(/images/neonbrand-mlZzMow-CQw-unsplash.jpg);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+.container .funding-cards-container .funding-cards .hero .between {
+  position: absolute;
+  left: 4rem;
+  top: 42%;
+  height: 6rem;
+  width: 6rem;
+  z-index: 1;
+  border: 2px solid black;
+  background-image: url(/images/hero-one.svg);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+.container .funding-cards-container .funding-cards .hero .lower {
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  padding-left: 4rem;
 }
-.container .bigcta .right,
-.container .bigcta .left {
-  margin: 5rem auto;
-  width: 80%;
-  height: 21.3rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-.container .bigcta .right img,
-.container .bigcta .left img {
-  position: relative;
-  height: 50.8rem;
-  border-radius: 50%;
-  top: 7.6rem;
-  right: -8.2rem;
-  z-index: 1;
-}
-.container .bigcta .left {
-  position: relative;
-  flex-direction: row;
-}
-.container .bigcta .left img {
-  left: -8.2rem;
-  transform: rotateY(180deg);
-}
-.container .bigcta .even {
-  background: rgba(255, 198, 160, 0.4);
-}
-.container .bigcta .cta h3 {
-  margin: 2rem auto;
-  width: 80%;
-  font-size: 6.5rem;
-  color: #62BC4E;
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
-  text-align: center;
-  background-color: white;
-}
-.container .bigcta .cta h3:before {
-  position: absolute;
-  top: 51%;
-  overflow: hidden;
-  width: 110%;
-  height: 3px;
-  content: '\a0';
-  background-color: black;
-  z-index: -1;
-  margin-left: -50%;
-  text-align: right;
-}
-.container .bigcta .cta button {
-  background-color: white;
-  border: 3px solid #7DAA6A;
-  border-radius: 10px;
-  height: 7.5rem;
-  font-size: 3rem;
-  color: #7DAA6A;
-  padding: 0 4.3rem;
-  margin: 0 4.3rem;
-}
-.container .bigcta .cta button:hover {
-  transform: scale(1.1);
-  color: #D4AF37;
-  border: 3px solid #D4AF37;
-  cursor: pointer;
+.container .funding-cards-container .funding-cards .hero .lower .location {
+  color: grey;
 }
 @keyframes rotate {
   from {

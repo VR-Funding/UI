@@ -15,6 +15,10 @@
         height: 100px;
         max-height: 100px;
         display: flex;
+        @media @tablet{
+            flex-direction: column;
+            height: 20rem;
+        }
         justify-content: space-between;
         align-items: center;
         .logo{
@@ -39,12 +43,19 @@
         .links{
             flex-shrink: 1;
             max-width: 60%;
+            @media @tablet{
+                max-width: 88%;
+                width: 100%;
+            }
             width: 60%;
             display: flex;
             justify-content: space-between;
             font-family: @text-font;
             a{
                 font-size: 2.6rem;
+                @media (max-width: 1180px){
+                    font-size: 2rem;
+                }
                 line-height: 100px;
                 text-decoration: none;
                 color: white;
@@ -54,6 +65,9 @@
                     font-family: @heading-font;
                     color: @greenlowlight;
                     font-size: 3.6rem;
+                    @media (max-width: 1180px){
+                        font-size: 2.6rem;
+                    }
                     &:hover{
                         font-size: 3.8rem;
                         color: @greenhighlight;
@@ -72,21 +86,7 @@
         justify-content: center;
         .start {
             flex-shrink: 1;
-            margin: 0 auto;
-            background-color: @greenlowlight;
-            height: 11.4rem;
-            width: 46.6rem;
-            border-radius: 40px;
-            border: none;
-            box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.4);
-            color: white;
-            font-family: @text-font;
-            font-size: 7.2rem;
-            text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-            &:hover{
-                transform: scale(1.1);
-                color: @goldtext;
-            }
+           .biggreenbutton();
         }
     }
     
