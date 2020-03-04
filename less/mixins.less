@@ -7,11 +7,17 @@
     align-items: center;
     text-align: center;
     .line{
-        width: 100%;
+        @media @tablet{
+            display: none;
+        }
+        width: 30%;
         border-bottom: 3px solid @greenlowlight;
     }       
     h2 {
-        width: 100%;
+        width: 40%;
+        @media @tablet{
+            width: 100%;
+        }
         color: @greenlowlight;
         height: 11.5rem;
         line-height: 11.5rem;

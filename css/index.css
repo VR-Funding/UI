@@ -85,7 +85,7 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  border: 0;
+  border: 2px solid black;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -173,11 +173,11 @@ header .navbar {
   background: rgba(0, 0, 0, 0.2);
 }
 header nav {
+  position: relative;
   max-width: 90%;
   width: 100%;
   margin: 0 auto;
   height: 100px;
-  max-height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -188,9 +188,18 @@ header nav {
     height: 20rem;
   }
 }
+@media (max-width: 500px) {
+  header nav {
+    height: 25rem;
+  }
+}
 header nav .logo {
-  flex-shrink: 1;
   width: 20%;
+}
+@media (max-width: 800px) {
+  header nav .logo {
+    width: 40%;
+  }
 }
 header nav .logo a {
   display: flex;
@@ -212,6 +221,12 @@ header nav .links {
   justify-content: space-between;
   font-family: 'Didact Gothic';
 }
+@media (max-width: 500px) {
+  header nav .links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media (max-width: 800px) {
   header nav .links {
     max-width: 88%;
@@ -227,6 +242,11 @@ header nav .links a {
 @media (max-width: 1180px) {
   header nav .links a {
     font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  header nav .links a {
+    line-height: normal;
   }
 }
 header nav .links .backendlinks a {
@@ -297,6 +317,11 @@ footer .copyright {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media (max-width: 800px) {
+  .container .help {
+    flex-direction: column;
+  }
+}
 .container .help .centered-placard {
   width: 100%;
   margin: 3rem auto;
@@ -306,11 +331,16 @@ footer .copyright {
   text-align: center;
 }
 .container .help .centered-placard .line {
-  width: 100%;
+  width: 30%;
   border-bottom: 3px solid #62BC4E;
 }
+@media (max-width: 800px) {
+  .container .help .centered-placard .line {
+    display: none;
+  }
+}
 .container .help .centered-placard h2 {
-  width: 100%;
+  width: 40%;
   color: #62BC4E;
   height: 11.5rem;
   line-height: 11.5rem;
@@ -322,6 +352,11 @@ footer .copyright {
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 800px) {
+  .container .help .centered-placard h2 {
+    width: 100%;
+  }
+}
 .container .help .centered-placard .line h2 {
   width: 80rem;
 }
@@ -330,6 +365,18 @@ footer .copyright {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .container .help .vert {
+    width: 80%;
+    margin: 2rem auto;
+  }
+}
+@media (max-width: 500px) {
+  .container .help .vert {
+    width: 100%;
+    margin: 1rem auto;
+  }
 }
 .container .help .vert h3 {
   text-align: center;
@@ -353,6 +400,12 @@ footer .copyright {
   justify-content: space-around;
   align-items: center;
 }
+@media (max-width: 800px) {
+  .container .newsletter {
+    flex-direction: column;
+    height: 50rem;
+  }
+}
 .container .newsletter input {
   position: relative;
   bottom: -3.2rem;
@@ -364,6 +417,17 @@ footer .copyright {
   background: #FFFFFF;
   box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+}
+@media (max-width: 800px) {
+  .container .newsletter input {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .container .newsletter input {
+    font-size: 3rem;
+    height: 9rem;
+  }
 }
 .container .newsletter input::-webkit-input-placeholder,
 .container .newsletter input::-moz-placeholder,
@@ -379,6 +443,11 @@ footer .copyright {
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+@media (max-width: 800px) {
+  .container .newsletter div {
+    width: 80%;
+  }
 }
 .container .newsletter div h4 {
   font-size: 4rem;
@@ -418,11 +487,16 @@ footer .copyright {
   text-align: center;
 }
 .container .funding-cards-container .centered-placard .line {
-  width: 100%;
+  width: 30%;
   border-bottom: 3px solid #62BC4E;
 }
+@media (max-width: 800px) {
+  .container .funding-cards-container .centered-placard .line {
+    display: none;
+  }
+}
 .container .funding-cards-container .centered-placard h2 {
-  width: 100%;
+  width: 40%;
   color: #62BC4E;
   height: 11.5rem;
   line-height: 11.5rem;
@@ -433,6 +507,11 @@ footer .copyright {
   border-radius: 5px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 800px) {
+  .container .funding-cards-container .centered-placard h2 {
+    width: 100%;
+  }
 }
 .container .funding-cards-container .browse {
   width: 100%;
@@ -507,7 +586,7 @@ footer .copyright {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 4rem;
+  padding: 0 4rem;
 }
 .container .funding-cards-container .funding-cards .hero .lower .location {
   color: grey;

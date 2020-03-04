@@ -9,6 +9,9 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        @media @tablet{
+            flex-direction: column;
+        }
         .centered-placard{
             .centered-placard();
             .line h2{
@@ -16,7 +19,14 @@
             }
         }
         .vert{
-            
+            @media @tablet{
+                width: 80%;
+                margin: 2rem auto;
+            }
+            @media @mobile{
+                width: 100%;
+                margin: 1rem auto;
+            }
             width:30%;
             display: flex;
             flex-direction: column;
@@ -47,8 +57,19 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        @media @tablet{
+            flex-direction: column;
+            height: 50rem;
+        }
         input{
-            
+            @media @tablet{
+                width: 80%;
+            }
+            @media @mobile{
+                font-size: 3rem;
+                height: 9rem;
+            }
+           
             position: relative;
             bottom: -3.2rem;
             padding: 0 0 0 3%;
@@ -66,6 +87,9 @@
             }
         }
         div{
+            @media @tablet{
+                width: 80%;
+            }
             flex-shrink: 1;
             width: 40%;
             display: flex;
@@ -164,7 +188,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    padding-left: 4rem;
+                    padding: 0 4rem;
                     .location{
                         color:grey;
                     }
