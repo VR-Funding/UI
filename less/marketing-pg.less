@@ -1,22 +1,18 @@
 .container{
     max-width: 1440px;
     margin: 7.15rem auto 5.3rem auto;
-    
-    .help{
-        padding: 3.05rem 0 5.3rem 0;
-        width: 88%;
-        margin: 0 auto;
+    .centered-placard{
+        .centered-placard();
+        .line h2{
+            width: 80rem;
+        }
+    }
+    .help{ 
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         @media @tablet{
             flex-direction: column;
-        }
-        .centered-placard{
-            .centered-placard();
-            .line h2{
-                width: 80rem;
-            }
         }
         .vert{
             @media @tablet{
@@ -111,12 +107,6 @@
 
 
     .funding-cards-container{
-        position: relative;
-        width: 88%;
-        margin: 0 auto;
-        .centered-placard{
-            .centered-placard();
-        }
         .browse{
             width: 100%;
             display: flex;
@@ -136,69 +126,12 @@
                 border-radius: 5px;
             }
         }
-        .funding-cards{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
             
-            .hero{
-                position: relative;
-                border: 1px solid #C4C4C4;
-                border-radius: 5px;
-                width: 34.5rem;
-                height: 38rem;
-                row-gap: 10rem;
-                overflow: hidden;
-                box-shadow: 4px 4px 6px rgba(196, 196, 196, 0.3);
-                margin-bottom: 3rem;
-                .trending{
-                    position: absolute;
-                    top: 1rem;
-                    left: 2rem;
-                    width: 10.8rem;
-                    height: 2.5rem;
-                    background-image: url(/images/trending.svg); z-index: 5;
-                }
-                .upper{
-                    height: 50%;
-                    border-bottom: 1px solid #C4C4C4;
-                    overflow: hidden;
-                    background-image: url(/images/neonbrand-mlZzMow-CQw-unsplash.jpg);
-                    background-color: white;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 100% 100%;
-                }
-                .between{
-                    position: absolute;
-                    left: 4rem;
-                    top: 42%;
-                    height: 6rem;
-                    width: 6rem;
-                    z-index: 1;
-                    border: 2px solid black;
-                    background-image: url(/images/hero-one.svg);
-                    background-color: white;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 100% 100%;
-                }
-                .lower{
-                    height: 50%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    padding: 0 4rem;
-                    .location{
-                        color:grey;
-                    }
-                }
-            }
             
-        }        
        
-
+        
         
     }//end of funding cards
+
 
 }
