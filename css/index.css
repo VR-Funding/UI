@@ -374,7 +374,7 @@ footer .copyright {
 }
 .container {
   max-width: 1440px;
-  margin: 7.15rem auto 5.3rem auto;
+  margin: 0 auto;
 }
 .container .centered-placard {
   width: 100%;
@@ -556,43 +556,42 @@ footer .copyright {
   border: 1px solid #C4C4C4;
   border-radius: 5px;
 }
-.container {
+.about {
   background-image: url(/images/about-bg.svg);
-  background-size: 100;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
 }
-.container .mission .mission-statement p {
+.about .mission .mission-statement p {
   font-size: 3rem;
 }
-.container .hero .upper {
+.about .hero .upper {
   background-size: cover;
 }
-.container .hero .lower .socials {
+.about .hero .lower .socials {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-.container .one .upper {
+.about .one .upper {
   background-image: url(/images/people/ahmedbarre.png);
   background-position: 0px -4.5rem;
 }
-.container .two .upper {
+.about .two .upper {
   background-image: url(/images/people/gordoncaister.jpeg);
 }
-.container .three .upper {
+.about .three .upper {
   background-image: url(/images/people/petepetrongonas.jpeg);
 }
-.container .four .upper {
+.about .four .upper {
   background-image: url(/images/people/jasonhemann.jpeg);
   background-position: 0px -10.5rem;
 }
-.container .five .upper {
+.about .five .upper {
   background-image: url(/images/people/kjmagill.png);
   background-position: 0px -3.5rem;
 }
-.container .six .upper {
+.about .six .upper {
   background-image: url(/images/people/seannaleid.jpeg);
 }
 @keyframes rotate {
