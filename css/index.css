@@ -162,6 +162,48 @@ a,
 .btn {
   font-size: 1.6rem;
 }
+.heroes {
+  display: flex;
+  flex-direction: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.heroes .hero {
+  position: relative;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+  width: 34.5rem;
+  height: 38rem;
+  row-gap: 10rem;
+  overflow: hidden;
+  box-shadow: 4px 4px 6px rgba(196, 196, 196, 0.3);
+  margin-bottom: 3rem;
+}
+.heroes .hero .upper {
+  height: 50%;
+  border-bottom: 1px solid #C4C4C4;
+  overflow: hidden;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+.heroes .hero .lower {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4rem;
+  background-color: white;
+}
+.heroes .hero .lower .location {
+  color: grey;
+}
+.eighty-eight {
+  padding: 3.05rem 0 5.3rem 0;
+  width: 88%;
+  margin: 0 auto;
+}
 header {
   background-image: url(../images/neonbrand-mlZzMow-CQw-unsplash.jpg);
   background-size: cover;
@@ -169,107 +211,121 @@ header {
   height: 676px;
   margin: 0 auto;
 }
-header .navbar {
+.navbar {
   background: rgba(0, 0, 0, 0.2);
+  max-width: 1440px;
+  margin: 0 auto;
 }
-header nav {
+nav {
   position: relative;
-  max-width: 90%;
+  max-width: 1296px;
   width: 100%;
   margin: 0 auto;
   height: 100px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 800px) {
-  header nav {
+  nav {
     flex-direction: column;
     height: 20rem;
   }
 }
 @media (max-width: 500px) {
-  header nav {
+  nav {
     height: 25rem;
   }
 }
-header nav .logo {
+nav .logo {
   width: 20%;
 }
 @media (max-width: 800px) {
-  header nav .logo {
+  nav .logo {
     width: 40%;
+    padding-top: 3rem;
   }
 }
-header nav .logo a {
+@media (max-width: 500px) {
+  nav .logo {
+    width: 50%;
+  }
+}
+nav .logo a {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
 }
-header nav .logo a h1 {
+nav .logo a h1 {
   color: #62BC4E;
 }
-header nav .logo a img {
+nav .logo a img {
   height: 70px;
 }
-header nav .links {
+nav .links {
   flex-shrink: 1;
   max-width: 60%;
+  padding-right: 3%;
   width: 60%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   font-family: 'Didact Gothic';
 }
 @media (max-width: 500px) {
-  header nav .links {
+  nav .links {
     flex-direction: column;
     align-items: center;
+    padding-right: 0px;
   }
 }
 @media (max-width: 800px) {
-  header nav .links {
+  nav .links {
     max-width: 88%;
     width: 100%;
   }
 }
-header nav .links a {
+nav .links a {
   font-size: 2.6rem;
   line-height: 100px;
   text-decoration: none;
   color: white;
 }
 @media (max-width: 1180px) {
-  header nav .links a {
+  nav .links a {
     font-size: 2rem;
   }
 }
 @media (max-width: 500px) {
-  header nav .links a {
+  nav .links a {
     line-height: normal;
   }
 }
-header nav .links .backendlinks a {
+nav .links .backendlinks a {
   font-family: 'Passion One';
   color: #62BC4E;
   font-size: 3.6rem;
 }
 @media (max-width: 1180px) {
-  header nav .links .backendlinks a {
+  nav .links .backendlinks a {
     font-size: 2.6rem;
   }
 }
-header nav .links .backendlinks a:hover {
+nav .links .backendlinks a:hover {
   font-size: 3.8rem;
   color: #7DAA6A;
 }
-header .startdiv {
+.startdiv {
   margin-top: 25rem;
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
-header .startdiv .start {
+.startdiv .start {
   flex-shrink: 1;
   margin: 0 auto;
   background-color: #62BC4E;
@@ -283,7 +339,12 @@ header .startdiv .start {
   font-size: 7.2rem;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
-header .startdiv .start:hover {
+@media (max-width: 500px) {
+  .startdiv .start {
+    font-size: 5rem;
+  }
+}
+.startdiv .start:hover {
   transform: scale(1.1);
   color: #D4AF37;
 }
@@ -307,22 +368,9 @@ footer .copyright {
 }
 .container {
   max-width: 1440px;
-  margin: 7.15rem auto 5.3rem auto;
-}
-.container .help {
-  padding: 3.05rem 0 5.3rem 0;
-  width: 88%;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
-@media (max-width: 800px) {
-  .container .help {
-    flex-direction: column;
-  }
-}
-.container .help .centered-placard {
+.container .centered-placard {
   width: 100%;
   margin: 3rem auto;
   height: 11.5rem;
@@ -330,17 +378,17 @@ footer .copyright {
   align-items: center;
   text-align: center;
 }
-.container .help .centered-placard .line {
+.container .centered-placard .line {
   width: 30%;
   border-bottom: 3px solid #62BC4E;
 }
 @media (max-width: 800px) {
-  .container .help .centered-placard .line {
+  .container .centered-placard .line {
     display: none;
   }
 }
-.container .help .centered-placard h2 {
-  width: 40%;
+.container .centered-placard h2 {
+  width: 50%;
   color: #62BC4E;
   height: 11.5rem;
   line-height: 11.5rem;
@@ -353,12 +401,28 @@ footer .copyright {
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 800px) {
-  .container .help .centered-placard h2 {
+  .container .centered-placard h2 {
     width: 100%;
   }
 }
-.container .help .centered-placard .line h2 {
+@media (max-width: 500px) {
+  .container .centered-placard h2 {
+    font-size: 8rem;
+  }
+}
+.container .centered-placard .line h2 {
   width: 80rem;
+}
+.container .help {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 800px) {
+  .container .help {
+    flex-direction: column;
+  }
 }
 .container .help .vert {
   width: 30%;
@@ -397,6 +461,7 @@ footer .copyright {
   height: 30rem;
   background: rgba(255, 198, 160, 0.4);
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
@@ -410,7 +475,6 @@ footer .copyright {
   position: relative;
   bottom: -3.2rem;
   padding: 0 0 0 3%;
-  font-size: 5.3rem;
   width: 40%;
   height: 11.4rem;
   line-height: 13rem;
@@ -429,6 +493,9 @@ footer .copyright {
     height: 9rem;
   }
 }
+.container .newsletter input::placeholder {
+  font-size: 5.3rem;
+}
 .container .newsletter input::-webkit-input-placeholder,
 .container .newsletter input::-moz-placeholder,
 .container .newsletter input:-ms-input-placeholder,
@@ -442,6 +509,7 @@ footer .copyright {
   width: 40%;
   display: flex;
   flex-direction: column;
+  justify-content: normal;
   text-align: center;
 }
 @media (max-width: 800px) {
@@ -469,53 +537,19 @@ footer .copyright {
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
   max-width: 100%;
 }
+@media (max-width: 500px) {
+  .container .newsletter div button {
+    font-size: 5rem;
+  }
+}
 .container .newsletter div button:hover {
   transform: scale(1.1);
   color: #D4AF37;
 }
-.container .funding-cards-container {
-  position: relative;
-  width: 88%;
-  margin: 0 auto;
-}
-.container .funding-cards-container .centered-placard {
-  width: 100%;
-  margin: 3rem auto;
-  height: 11.5rem;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-.container .funding-cards-container .centered-placard .line {
-  width: 30%;
-  border-bottom: 3px solid #62BC4E;
-}
-@media (max-width: 800px) {
-  .container .funding-cards-container .centered-placard .line {
-    display: none;
-  }
-}
-.container .funding-cards-container .centered-placard h2 {
-  width: 40%;
-  color: #62BC4E;
-  height: 11.5rem;
-  line-height: 11.5rem;
-  font-size: 10rem;
-  letter-spacing: 0.05rem;
-  background-color: white;
-  border: 3px solid #62BC4E;
-  border-radius: 5px;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-}
-@media (max-width: 800px) {
-  .container .funding-cards-container .centered-placard h2 {
-    width: 100%;
-  }
-}
 .container .funding-cards-container .browse {
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 3% 3rem;
@@ -532,23 +566,7 @@ footer .copyright {
   border: 1px solid #C4C4C4;
   border-radius: 5px;
 }
-.container .funding-cards-container .funding-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.container .funding-cards-container .funding-cards .hero {
-  position: relative;
-  border: 1px solid #C4C4C4;
-  border-radius: 5px;
-  width: 34.5rem;
-  height: 38rem;
-  row-gap: 10rem;
-  overflow: hidden;
-  box-shadow: 4px 4px 6px rgba(196, 196, 196, 0.3);
-  margin-bottom: 3rem;
-}
-.container .funding-cards-container .funding-cards .hero .trending {
+.container .funding-cards-container .trending {
   position: absolute;
   top: 1rem;
   left: 2rem;
@@ -557,132 +575,97 @@ footer .copyright {
   background-image: url(/images/trending.svg);
   z-index: 5;
 }
-.container .funding-cards-container .funding-cards .hero .upper {
-  height: 50%;
-  border-bottom: 1px solid #C4C4C4;
-  overflow: hidden;
-  background-image: url(/images/neonbrand-mlZzMow-CQw-unsplash.jpg);
-  background-color: white;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
-}
-.container .funding-cards-container .funding-cards .hero .between {
+.container .funding-cards-container .between {
   position: absolute;
   left: 4rem;
   top: 42%;
   height: 6rem;
   width: 6rem;
   z-index: 1;
-  border: 2px solid black;
-  background-image: url(/images/hero-one.svg);
-  background-color: white;
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  box-shadow: 3px 3px 4px rgba(196, 196, 196, 0.3);
+  border-radius: 5px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
 }
-.container .funding-cards-container .funding-cards .hero .lower {
-  height: 50%;
+.container .funding-cards-container .one div.upper {
+  background-image: url(/images/icons/crazi.jpg);
+}
+.container .funding-cards-container .one div.between {
+  background-image: url(/images/icons/hero-one.svg);
+}
+.container .funding-cards-container .two div.upper {
+  background-image: url(/images/icons/mobius.jpg);
+  background-size: 100%;
+  background-position: 0 0;
+}
+.container .funding-cards-container .two div.between {
+  background-image: url(/images/icons/hero-two.svg);
+}
+.container .funding-cards-container .three div.upper {
+  background-image: url(/images/icons/juicy.jpg);
+}
+.container .funding-cards-container .three div.between {
+  background-image: url(/images/icons/hero-three.svg);
+}
+.container .funding-cards-container .four div.upper {
+  background-image: url(/images/icons/swipe.jpg);
+}
+.container .funding-cards-container .four div.between {
+  background-image: url(/images/icons/hero-four.svg);
+}
+.container .funding-cards-container .five div.upper {
+  background-image: url(/images/icons/security.jpg);
+  background-size: 100%;
+  background-position: 0 -15rem;
+}
+.container .funding-cards-container .five div.between {
+  background-image: url(/images/icons/hero-five.svg);
+  background-size: 80px 80px;
+}
+.container .funding-cards-container .six div.upper {
+  background-image: url(/images/icons/turn.jpg);
+}
+.container .funding-cards-container .six div.between {
+  background-image: url(/images/icons/hero-six.svg);
+}
+.about {
+  background-image: url(/images/about-bg.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.about .mission .mission-statement p {
+  font-size: 3rem;
+}
+.about .hero .upper {
+  background-size: cover;
+}
+.about .hero .lower .socials {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 4rem;
+  justify-content: flex-end;
 }
-.container .funding-cards-container .funding-cards .hero .lower .location {
-  color: grey;
+.about .one .upper {
+  background-image: url(/images/people/ahmedbarre.png);
+  background-position: 0px -4.5rem;
 }
-@keyframes rotate {
-  from {
-    transform: rotateY(-360deg);
-  }
-  to {
-    transform: rotateY(0deg);
-  }
+.about .two .upper {
+  background-image: url(/images/people/gordoncaister.jpeg);
 }
-.rotating-area {
-  position: relative;
-  top: -28.2rem;
-  width: 300px;
-  margin: 3rem auto 30rem auto;
-  perspective: 2000px;
+.about .three .upper {
+  background-image: url(/images/people/petepetrongonas.jpeg);
 }
-.rotating-area h2 {
-  text-align: center;
-  font-size: 10rem;
-  margin-bottom: 3rem;
-  color: #62BC4E;
+.about .four .upper {
+  background-image: url(/images/people/jasonhemann.jpeg);
+  background-position: 0px -10.5rem;
 }
-.rotating-area h3 {
-  text-align: center;
-  font-size: 2rem;
+.about .five .upper {
+  background-image: url(/images/people/kjmagill.png);
+  background-position: 0px -3.5rem;
 }
-.rotating-area:hover .hero-cards {
-  animation-play-state: paused;
-  transform: rotateY(180deg);
-}
-.rotating-area .hero-cards {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transform: rotateY(-360deg) translateZ(-300px);
-  animation: rotate 20s steps(10000, end) infinite;
-}
-.rotating-area .hero-cards .rotating-img {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 300px;
-  height: 200px;
-  transition: transform 0.8s ease-in-out;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-}
-.rotating-area .hero-cards .rotating-img section,
-.rotating-area .hero-cards .rotating-img .section-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  /* Safari */
-  backface-visibility: hidden;
-  background-color: white;
-  color: black;
-  border: 3px solid #62BC4E;
-  border-radius: 15px;
-  text-align: justify;
-  padding: 5px 5px;
-}
-.rotating-area .hero-cards .rotating-img section {
-  transform: rotateY(180deg);
-}
-.rotating-area .hero-cards .img-one {
-  transform: rotateY(0deg) translateZ(300px);
-}
-.rotating-area .hero-cards .img-one:hover {
-  transform: rotateY(180deg) translateZ(-300px);
-}
-.rotating-area .hero-cards .img-two {
-  transform: rotateY(72deg) translateZ(300px);
-}
-.rotating-area .hero-cards .img-two:hover {
-  transform: rotateY(252deg) translateZ(-300px);
-}
-.rotating-area .hero-cards .img-three {
-  transform: rotateY(144deg) translateZ(300px);
-}
-.rotating-area .hero-cards .img-three:hover {
-  transform: rotateY(324deg) translateZ(-300px);
-}
-.rotating-area .hero-cards .img-four {
-  transform: rotateY(216deg) translateZ(300px);
-}
-.rotating-area .hero-cards .img-four:hover {
-  transform: rotateY(396deg) translateZ(-300px);
-}
-.rotating-area .hero-cards .img-five {
-  transform: rotateY(288deg) translateZ(300px);
-}
-.rotating-area .hero-cards .img-five:hover {
-  transform: rotateY(468deg) translateZ(-300px);
+.about .six .upper {
+  background-image: url(/images/people/seannaleid.jpeg);
 }
