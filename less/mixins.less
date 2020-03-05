@@ -23,9 +23,12 @@
         border-bottom: 3px solid @greenlowlight;
     }       
     h2 {
-        width: 40%;
+        width: 50%;
         @media @tablet{
             width: 100%;
+        }
+        @media @mobile{
+            font-size: 8rem;
         }
         color: @greenlowlight;
         height: 11.5rem;
@@ -54,6 +57,9 @@
     font-family: @text-font;
     font-size: 7.2rem;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    @media @mobile {
+        font-size: 5rem;
+    }
     &:hover{
         transform: scale(1.1);
         color: @goldtext;

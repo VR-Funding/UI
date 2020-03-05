@@ -33,6 +33,9 @@ nav{
            width: 40%;
            padding-top: 3rem;
        }
+       @media @mobile{
+           width: 50%;
+       }
         width: 20%;
         a {
             
@@ -52,9 +55,11 @@ nav{
     .links{
         flex-shrink: 1;
         max-width: 60%;
+        padding-right: 3%;
         @media @mobile{
             flex-direction: column;
             align-items: center;
+            padding-right: 0px;
         }
         @media @tablet{
             max-width: 88%;

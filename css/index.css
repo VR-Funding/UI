@@ -247,6 +247,11 @@ nav .logo {
     padding-top: 3rem;
   }
 }
+@media (max-width: 500px) {
+  nav .logo {
+    width: 50%;
+  }
+}
 nav .logo a {
   display: flex;
   flex-direction: row;
@@ -263,6 +268,7 @@ nav .logo a img {
 nav .links {
   flex-shrink: 1;
   max-width: 60%;
+  padding-right: 3%;
   width: 60%;
   display: flex;
   flex-direction: row;
@@ -273,6 +279,7 @@ nav .links {
   nav .links {
     flex-direction: column;
     align-items: center;
+    padding-right: 0px;
   }
 }
 @media (max-width: 800px) {
@@ -332,6 +339,11 @@ nav .links .backendlinks a:hover {
   font-size: 7.2rem;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 500px) {
+  .startdiv .start {
+    font-size: 5rem;
+  }
+}
 .startdiv .start:hover {
   transform: scale(1.1);
   color: #D4AF37;
@@ -376,7 +388,7 @@ footer .copyright {
   }
 }
 .container .centered-placard h2 {
-  width: 40%;
+  width: 50%;
   color: #62BC4E;
   height: 11.5rem;
   line-height: 11.5rem;
@@ -391,6 +403,11 @@ footer .copyright {
 @media (max-width: 800px) {
   .container .centered-placard h2 {
     width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .container .centered-placard h2 {
+    font-size: 8rem;
   }
 }
 .container .centered-placard .line h2 {
@@ -458,7 +475,6 @@ footer .copyright {
   position: relative;
   bottom: -3.2rem;
   padding: 0 0 0 3%;
-  font-size: 5.3rem;
   width: 40%;
   height: 11.4rem;
   line-height: 13rem;
@@ -477,6 +493,9 @@ footer .copyright {
     height: 9rem;
   }
 }
+.container .newsletter input::placeholder {
+  font-size: 5.3rem;
+}
 .container .newsletter input::-webkit-input-placeholder,
 .container .newsletter input::-moz-placeholder,
 .container .newsletter input:-ms-input-placeholder,
@@ -489,7 +508,7 @@ footer .copyright {
   flex-shrink: 1;
   width: 40%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: normal;
   text-align: center;
 }
@@ -517,6 +536,11 @@ footer .copyright {
   font-size: 7.2rem;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
   max-width: 100%;
+}
+@media (max-width: 500px) {
+  .container .newsletter div button {
+    font-size: 5rem;
+  }
 }
 .container .newsletter div button:hover {
   transform: scale(1.1);
@@ -644,99 +668,4 @@ footer .copyright {
 }
 .about .six .upper {
   background-image: url(/images/people/seannaleid.jpeg);
-}
-@keyframes rotate {
-  from {
-    transform: rotateY(-360deg);
-  }
-  to {
-    transform: rotateY(0deg);
-  }
-}
-.rotating-area {
-  position: relative;
-  top: -28.2rem;
-  width: 300px;
-  margin: 3rem auto 30rem auto;
-  perspective: 2000px;
-}
-.rotating-area h2 {
-  text-align: center;
-  font-size: 10rem;
-  margin-bottom: 3rem;
-  color: #62BC4E;
-}
-.rotating-area h3 {
-  text-align: center;
-  font-size: 2rem;
-}
-.rotating-area:hover .hero-cards {
-  animation-play-state: paused;
-  transform: rotateY(180deg);
-}
-.rotating-area .hero-cards {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transform: rotateY(-360deg) translateZ(-300px);
-  animation: rotate 20s steps(10000, end) infinite;
-}
-.rotating-area .hero-cards .rotating-img {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 300px;
-  height: 200px;
-  transition: transform 0.8s ease-in-out;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-}
-.rotating-area .hero-cards .rotating-img section,
-.rotating-area .hero-cards .rotating-img .section-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  /* Safari */
-  backface-visibility: hidden;
-  background-color: white;
-  color: black;
-  border: 3px solid #62BC4E;
-  border-radius: 15px;
-  text-align: justify;
-  padding: 5px 5px;
-}
-.rotating-area .hero-cards .rotating-img section {
-  transform: rotateY(180deg);
-}
-.rotating-area .hero-cards .img-one {
-  transform: rotateY(0deg) translateZ(300px);
-}
-.rotating-area .hero-cards .img-one:hover {
-  transform: rotateY(180deg) translateZ(-300px);
-}
-.rotating-area .hero-cards .img-two {
-  transform: rotateY(72deg) translateZ(300px);
-}
-.rotating-area .hero-cards .img-two:hover {
-  transform: rotateY(252deg) translateZ(-300px);
-}
-.rotating-area .hero-cards .img-three {
-  transform: rotateY(144deg) translateZ(300px);
-}
-.rotating-area .hero-cards .img-three:hover {
-  transform: rotateY(324deg) translateZ(-300px);
-}
-.rotating-area .hero-cards .img-four {
-  transform: rotateY(216deg) translateZ(300px);
-}
-.rotating-area .hero-cards .img-four:hover {
-  transform: rotateY(396deg) translateZ(-300px);
-}
-.rotating-area .hero-cards .img-five {
-  transform: rotateY(288deg) translateZ(300px);
-}
-.rotating-area .hero-cards .img-five:hover {
-  transform: rotateY(468deg) translateZ(-300px);
 }
