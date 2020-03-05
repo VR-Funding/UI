@@ -164,8 +164,9 @@ a,
 }
 .heroes {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .heroes .hero {
   position: relative;
@@ -178,34 +179,10 @@ a,
   box-shadow: 4px 4px 6px rgba(196, 196, 196, 0.3);
   margin-bottom: 3rem;
 }
-.heroes .hero .trending {
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-  width: 10.8rem;
-  height: 2.5rem;
-  background-image: url(/images/trending.svg);
-  z-index: 5;
-}
 .heroes .hero .upper {
   height: 50%;
   border-bottom: 1px solid #C4C4C4;
   overflow: hidden;
-  background-image: url(/images/neonbrand-mlZzMow-CQw-unsplash.jpg);
-  background-color: white;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
-}
-.heroes .hero .between {
-  position: absolute;
-  left: 4rem;
-  top: 42%;
-  height: 6rem;
-  width: 6rem;
-  z-index: 1;
-  border: 2px solid black;
-  background-image: url(/images/hero-one.svg);
   background-color: white;
   background-repeat: no-repeat;
   background-position: center;
@@ -246,6 +223,7 @@ nav {
   margin: 0 auto;
   height: 100px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -266,10 +244,12 @@ nav .logo {
 @media (max-width: 800px) {
   nav .logo {
     width: 40%;
+    padding-top: 3rem;
   }
 }
 nav .logo a {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
@@ -285,6 +265,7 @@ nav .links {
   max-width: 60%;
   width: 60%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   font-family: 'Didact Gothic';
 }
@@ -334,6 +315,7 @@ nav .links .backendlinks a:hover {
   margin-top: 25rem;
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 .startdiv .start {
@@ -416,6 +398,7 @@ footer .copyright {
 }
 .container .help {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -461,6 +444,7 @@ footer .copyright {
   height: 30rem;
   background: rgba(255, 198, 160, 0.4);
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
@@ -505,7 +489,8 @@ footer .copyright {
   flex-shrink: 1;
   width: 40%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: normal;
   text-align: center;
 }
 @media (max-width: 800px) {
@@ -540,6 +525,7 @@ footer .copyright {
 .container .funding-cards-container .browse {
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 3% 3rem;
@@ -555,6 +541,71 @@ footer .copyright {
   background: #FFFFFF;
   border: 1px solid #C4C4C4;
   border-radius: 5px;
+}
+.container .funding-cards-container .trending {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  width: 10.8rem;
+  height: 2.5rem;
+  background-image: url(/images/trending.svg);
+  z-index: 5;
+}
+.container .funding-cards-container .between {
+  position: absolute;
+  left: 4rem;
+  top: 42%;
+  height: 6rem;
+  width: 6rem;
+  z-index: 1;
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  box-shadow: 3px 3px 4px rgba(196, 196, 196, 0.3);
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+.container .funding-cards-container .one div.upper {
+  background-image: url(/images/icons/crazi.jpg);
+}
+.container .funding-cards-container .one div.between {
+  background-image: url(/images/icons/hero-one.svg);
+}
+.container .funding-cards-container .two div.upper {
+  background-image: url(/images/icons/mobius.jpg);
+  background-size: 100%;
+  background-position: 0 0;
+}
+.container .funding-cards-container .two div.between {
+  background-image: url(/images/icons/hero-two.svg);
+}
+.container .funding-cards-container .three div.upper {
+  background-image: url(/images/icons/juicy.jpg);
+}
+.container .funding-cards-container .three div.between {
+  background-image: url(/images/icons/hero-three.svg);
+}
+.container .funding-cards-container .four div.upper {
+  background-image: url(/images/icons/swipe.jpg);
+}
+.container .funding-cards-container .four div.between {
+  background-image: url(/images/icons/hero-four.svg);
+}
+.container .funding-cards-container .five div.upper {
+  background-image: url(/images/icons/security.jpg);
+  background-size: 100%;
+  background-position: 0 -15rem;
+}
+.container .funding-cards-container .five div.between {
+  background-image: url(/images/icons/hero-five.svg);
+  background-size: 80px 80px;
+}
+.container .funding-cards-container .six div.upper {
+  background-image: url(/images/icons/turn.jpg);
+}
+.container .funding-cards-container .six div.between {
+  background-image: url(/images/icons/hero-six.svg);
 }
 .about {
   background-image: url(/images/about-bg.svg);
